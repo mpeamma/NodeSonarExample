@@ -2,7 +2,7 @@ pipeline {
     agent { 
         docker { 
             image 'node:15.10.0-buster' 
-            args '-u root:root'
+            // args '-u root:root'
         } 
     }
     stages {

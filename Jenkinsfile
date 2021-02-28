@@ -9,7 +9,7 @@ pipeline {
         stage('set up') {
             steps {
                 sh 'npm --version'
-                sh 'npm cache clean'
+                sh 'npm cache clean --force'
                 sh 'npm ci'
             }
         }

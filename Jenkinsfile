@@ -4,7 +4,7 @@ pipeline {
         stage('set up') {
             steps {
                 sh 'npm --version'
-                sh 'npm cis'
+                sh 'npm ci'
             }
         }
 

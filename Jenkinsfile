@@ -1,10 +1,11 @@
 pipeline {
-    agent { 
-        docker { 
-            image 'node:15.10.0-buster' 
-            // args '-u root:root'
-        } 
-    }
+    // agent { 
+    //     docker { 
+    //         image 'node:15.10.0-buster' 
+    //         args '-u root:root'
+    //     } 
+    // }
+    agent any
     stages {
         stage('set up') {
             steps {

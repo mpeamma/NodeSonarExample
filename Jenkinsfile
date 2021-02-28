@@ -2,13 +2,14 @@ pipeline {
     agent { 
         docker { 
             image 'node:15.10.0-buster' 
-            args '-u root:root'
+            // args '-u root:root'
         } 
     }
     stages {
         stage('set up') {
             steps {
                 sh 'npm --version'
+                sh 'npm cache clean'
                 sh 'npm ci'
             }
         }

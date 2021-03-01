@@ -1,7 +1,8 @@
 const sonarqubeScanner =  require('sonarqube-scanner');
 sonarqubeScanner(
     {
-        serverUrl:  'http://localhost:9000',
+        //serverUrl:  'http://localhost:9000',
+        serverUrl: process.env.SONAR_URL,
         options : {
             'sonar.sources':  'src',
             'sonar.tests':  'src',

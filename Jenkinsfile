@@ -23,7 +23,7 @@ pipeline {
         stage('sonar') {
             steps {
                 withSonarQubeEnv('') {
-                    echo '$SONAR_URL'
+                    sh 'printenv'
                     sh 'npm run sonar'
                 }
             }

@@ -22,7 +22,9 @@ pipeline {
 
         stage('sonar') {
             steps {
-                sh 'npm run sonar'
+                withSonarQubeEnv('') {
+                    sh 'npm run sonar'
+                }
             }
         }
     }
